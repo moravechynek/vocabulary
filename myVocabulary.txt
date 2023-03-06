@@ -1,8 +1,6 @@
 example - NOUN
-example - NOUN
 is - VERB
 one - NUM
-simple - ADJ
 simple - ADJ
 this - DET
 very - ADV

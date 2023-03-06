@@ -12,6 +12,15 @@ def rm_stopwords(list):
             list.remove(item)
     return list
 
+def rm_duplicates(list):
+    unique_list = []
+ 
+    for x in list:
+        if x not in unique_list:
+            unique_list.append(x)
+    
+    return unique_list
+
 text = "This is one simple example. Yes, very simple example."
 tokens = word_tokenize(text)
 
@@ -20,6 +29,7 @@ tags = nltk.pos_tag(tokens, tagset = 'universal')
 tags = [ [t[0].lower(),t[1]] for t in tags]
 
 tags = rm_stopwords(tags)
+tags = rm_duplicates(tags)
 
 tags.sort()
 
